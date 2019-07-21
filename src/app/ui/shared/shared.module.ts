@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 // import { LoginComponent } from './login/login.component';
 import { DefaultLayoutComponent } from './containers/default-layout/default-layout.component';
 
-import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
+ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 
 import {
   AppAsideModule,
@@ -12,7 +12,7 @@ import {
   AppFooterModule,
   AppSidebarModule
 } from '@coreui/angular';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -24,8 +24,8 @@ import { RouterModule } from '@angular/router';
     AppFooterModule,
     AppHeaderModule,
     AppSidebarModule,
-    PerfectScrollbarModule,
-    BsDropdownModule.forRoot()
+     PerfectScrollbarModule,
+     BsDropdownModule.forRoot()
   ],
   declarations: [DefaultLayoutComponent],
   exports: [DefaultLayoutComponent]

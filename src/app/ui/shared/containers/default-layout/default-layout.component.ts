@@ -38,13 +38,13 @@
 
 import { Component, OnDestroy, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-// import { navItems } from '../../_nav';
-import { navItems } from '../../../../_nav';
+import { navItems } from '@app/_nav';
 
 
 @Component({
   selector: 'app-dashboard',
-  templateUrl: './default-layout.component.html'
+  templateUrl: './default-layout.component.html',
+  styleUrls: ['./default-layout.component.scss']
 })
 export class DefaultLayoutComponent implements OnDestroy {
   public navItems = navItems;
