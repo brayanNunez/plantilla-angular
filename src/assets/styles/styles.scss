@@ -1,0 +1,19 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui";
+// angular material
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/*
+alternatives:
+deeppurple-amber.css
+pink-bluegrey.css
+purple-green.css
+*/
+
+// If you want to add something do it here
+@import "custom";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
