@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from '@ui/shared/shared.module';
 import { TestComponent } from './ui/test/test.component';
 import { Test2Component } from './ui/test2/test2.component';
+import { MaterialModule } from './ui/material.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { Test2Component } from './ui/test2/test2.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    MaterialModule,
     SharedModule
   ],
   providers: [{
@@ -27,4 +29,6 @@ import { Test2Component } from './ui/test2/test2.component';
   }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+ 
+ }

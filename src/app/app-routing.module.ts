@@ -4,6 +4,26 @@ import { DefaultLayoutComponent } from './ui/shared';
 import { TestComponent } from './ui/test/test.component';
 import { Test2Component } from './ui/test2/test2.component';
 
+// export const routes: Routes = [
+//   {
+//     path: '',
+//     component: DefaultLayoutComponent,
+//     data: {
+//       title: 'Home'
+//     },
+//     children: [
+//       {
+//         path: 'dashboard',
+//         component: TestComponent
+//       },
+//       {
+//         path: 'colors',
+//         component: Test2Component
+//       }
+//     ]
+//   }
+// ];
+
 export const routes: Routes = [
   {
     path: '',
@@ -13,12 +33,20 @@ export const routes: Routes = [
     },
     children: [
       {
-        path: 'dashboard',
-        component: TestComponent
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'dashboard'
       },
       {
-        path: 'colors',
-        component: Test2Component
+        path: 'dashboard',
+        component:TestComponent,
+        data: {
+          title: 'dashboard'
+        }
+      },
+      {
+        path: 'system',
+        loadChildren: '@ui/system/system.module#SystemModule'
       }
     ]
   }
@@ -28,4 +56,5 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

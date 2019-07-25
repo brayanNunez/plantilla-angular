@@ -38,5 +38,17 @@ export const navItems: NavData[] = [
       variant: 'info',
       text: 'NEW'
     }
+  },
+  {
+    name: 'System',
+    url: '/system',
+    icon: 'icon-settings',
+    children: [
+      {
+        name: 'Projects',
+        url: '/system/projects',
+        icon: 'icon-wrench'
+      },
+    ]
   }
 ];
