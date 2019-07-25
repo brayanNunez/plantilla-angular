@@ -10,7 +10,8 @@ import {
   AppAsideModule,
   AppHeaderModule,
   AppFooterModule,
-  AppSidebarModule
+  AppSidebarModule,
+  AppBreadcrumbModule
 } from '@coreui/angular';
  import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { RouterModule } from '@angular/router';
@@ -20,6 +21,7 @@ import { RouterModule } from '@angular/router';
     RouterModule,
     // SharedComponentsModule,
     // MaterialModule,
+    AppBreadcrumbModule.forRoot(),
     AppAsideModule,
     AppFooterModule,
     AppHeaderModule,
