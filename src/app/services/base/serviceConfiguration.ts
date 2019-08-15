@@ -5,7 +5,7 @@ import { environment } from '@environment';
 export class ServiceConfiguration {
   public baseUrl = environment.apiUrl;
 
-  constructor() {}
+      constructor() {}
 
   public getUri(typeName: string, path: string = '') {
     return this.baseUrl + '/' + typeName + path;

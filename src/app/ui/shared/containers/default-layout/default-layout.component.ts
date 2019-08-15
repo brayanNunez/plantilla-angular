@@ -1,13 +1,11 @@
-
-
-import { Component, OnDestroy, Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { navItems } from '@app/_nav';
+import { Component, OnDestroy, Inject } from "@angular/core";
+import { DOCUMENT } from "@angular/common";
+import { navItems } from "@app/_nav";
 
 @Component({
-  selector: 'app-dashboard',
-  templateUrl: './default-layout.component.html',
-  styleUrls: ['./default-layout.component.scss']
+  selector: "app-dashboard",
+  templateUrl: "./default-layout.component.html",
+  styleUrls: ["./default-layout.component.scss"]
 })
 export class DefaultLayoutComponent implements OnDestroy {
   public navItems = navItems;
@@ -15,14 +13,15 @@ export class DefaultLayoutComponent implements OnDestroy {
   private changes: MutationObserver;
   public element: HTMLElement;
   constructor(@Inject(DOCUMENT) _document?: any) {
-
-    this.changes = new MutationObserver((mutations) => {
-      this.sidebarMinimized = _document.body.classList.contains('sidebar-minimized');
+    this.changes = new MutationObserver(mutations => {
+      this.sidebarMinimized = _document.body.classList.contains(
+        "sidebar-minimized"
+      );
     });
     this.element = _document.body;
     this.changes.observe(<Element>this.element, {
       attributes: true,
-      attributeFilter: ['class']
+      attributeFilter: ["class"]
     });
   }
 
@@ -30,5 +29,3 @@ export class DefaultLayoutComponent implements OnDestroy {
     this.changes.disconnect();
   }
 }
-
-
